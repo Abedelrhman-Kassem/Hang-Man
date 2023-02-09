@@ -1,0 +1,290 @@
+:root {
+  --base-color: #222;
+  --base-width: 4px;
+}
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+hr {
+  margin: 0;
+}
+.conatiner {
+  position: relative;
+  width: 1000px;
+  margin: 20px auto;
+  background-color: #eee;
+}
+.conatiner .result {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background: #ffffff91;
+  z-index: 9;
+  font-size: 35px;
+  font-weight: bold;
+}
+.conatiner .result #reload {
+  background-color: #ff5722;
+  border: none;
+  width: 170px;
+  height: 63px;
+  margin-top: 7px;
+  color: #fff;
+  font-size: 27px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.conatiner .result #reload:hover {
+  background-color: #f83b00;
+}
+.conatiner .result span {
+  border-bottom: 4px solid #ff5722;
+}
+.conatiner .up {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.conatiner .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 440px;
+}
+.conatiner .base {
+  height: 100%;
+  flex: 1;
+  position: relative;
+}
+.conatiner .base::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: var(--base-width);
+  background-color: var(--base-color);
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.conatiner .stand {
+  position: absolute;
+  width: var(--base-width);
+  height: 300px;
+  background-color: var(--base-color);
+  left: 50%;
+  bottom: 102px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.conatiner .row {
+  position: absolute;
+  width: 100px;
+  height: var(--base-width);
+  background-color: var(--base-color);
+  bottom: 400px;
+  left: 50%;
+  transform: translateX(-2px);
+  -webkit-transform: translateX(-2px);
+  -moz-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  -o-transform: translateX(-2px);
+}
+.conatiner .stand-3 {
+  position: absolute;
+  width: var(--base-width);
+  background-color: var(--base-color);
+  height: 50px;
+  left: 69%;
+  bottom: 353px;
+}
+.conatiner .rope {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 62%;
+  top: 83px;
+  border: var(--base-width) dashed var(--base-color);
+  background-color: transparent !important;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: translateX(2.5px) rotate(2.8deg);
+  -webkit-transform: translateX(2.5px) rotate(2.8deg);
+  -moz-transform: translateX(2.5px) rotate(2.8deg);
+  -ms-transform: translateX(2.5px) rotate(2.8deg);
+  -o-transform: translateX(2.5px) rotate(2.8deg);
+}
+.conatiner .man {
+  position: absolute;
+  left: 69.3%;
+  top: 142px;
+  background-color: var(--base-color);
+  width: var(--base-width);
+  height: 100px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.conatiner .head {
+  background-color: transparent !important;
+  position: absolute;
+  top: 142px;
+  left: 69%;
+  width: 50px;
+  height: 50px;
+  border: var(--base-width) solid var(--base-color);
+  transform: translate(-47%, -98%);
+  -webkit-transform: translate(-47%, -98%);
+  -moz-transform: translate(-47%, -98%);
+  -ms-transform: translate(-47%, -98%);
+  -o-transform: translate(-47%, -98%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.conatiner .arms {
+  position: relative;
+}
+.conatiner .arms::before,
+.conatiner .arms::after {
+  content: "";
+  position: absolute;
+  background-color: var(--base-color);
+  width: var(--base-width);
+  height: 55px;
+  left: 69%;
+  top: 150px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  transform: rotate(120deg) translate(-25%, 50%);
+  -webkit-transform: rotate(120deg) translate(-25%, 50%);
+  -moz-transform: rotate(120deg) translate(-25%, 50%);
+  -ms-transform: rotate(120deg) translate(-25%, 50%);
+  -o-transform: rotate(120deg) translate(-25%, 50%);
+}
+.conatiner .arms::after {
+  transform: rotate(-120deg) translate(-25%, 50%);
+  -webkit-transform: rotate(-120deg) translate(-25%, 50%);
+  -moz-transform: rotate(-120deg) translate(-25%, 50%);
+  -ms-transform: rotate(-120deg) translate(-25%, 50%);
+  -o-transform: rotate(-120deg) translate(-25%, 50%);
+}
+.conatiner .legs::before,
+.conatiner .legs::after {
+  content: "";
+  position: absolute;
+  background-color: var(--base-color);
+  width: var(--base-width);
+  height: 55px;
+  left: calc(69% + 3px);
+  top: 48%;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  transform: rotate(45deg) translate(-25%, 50%);
+  -webkit-transform: rotate(45deg) translate(-25%, 50%);
+  -moz-transform: rotate(45deg) translate(-25%, 50%);
+  -ms-transform: rotate(45deg) translate(-25%, 50%);
+  -o-transform: rotate(45deg) translate(-25%, 50%);
+}
+.conatiner .legs::after {
+  transform: rotate(-45deg) translate(-25%, 50%);
+  -webkit-transform: rotate(-45deg) translate(-25%, 50%);
+  -moz-transform: rotate(-45deg) translate(-25%, 50%);
+  -ms-transform: rotate(-45deg) translate(-25%, 50%);
+  -o-transform: rotate(-45deg) translate(-25%, 50%);
+}
+.conatiner .main .letters {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.conatiner .main .letters span {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #094b84;
+  color: #fff;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.conatiner .main .letters span.clicked {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.letters-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: center;
+}
+.letters-box span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 50px;
+  background-color: #fff;
+  font-weight: bold;
+  margin: 0 10px;
+  font-size: 20px;
+  border-bottom: 2px solid #ff5722;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.letters-box span.break {
+  font-size: 30px;
+  background-color: transparent;
+  border-bottom: none;
+}
+.conatiner .main .base .colored {
+  background-color: red;
+  border-color: red !important;
+}
+.conatiner .main .colored::before {
+  background-color: red;
+}
+.conatiner .main .colored::after {
+  background-color: red;
+}

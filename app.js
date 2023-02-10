@@ -3,7 +3,7 @@ let alphaArray = alphapet.split("");
 
 let mainObject = {
   Programming: ["java script", "Ruby", "HTML", "CSS", "go", "React"],
-  Countries: ["Egypt", "Palestine", "Libya", "Suadi-Arabia", "Syria", "Sudan"],
+  Countries: ["Egypt", "Palestine", "Libya", "Saudi-Arabia", "Syria", "Sudan"],
   Planets: ["Mercury", "Venus", "Earth", "Mars", "Uranus", "Neptun"],
   Fruits: ["Apple", "Orange", "Banana", "Water-Melon", "Strawberry", "apricot"],
 };

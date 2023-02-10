@@ -24,7 +24,7 @@ for (let i = 0; i < randomElement.length; i++) {
   lettersBox.appendChild(span);
 }
 
-document.querySelector(".word-from").innerHTML = `Word Clue: ${objectKey}`;
+document.querySelector(".word-from").innerHTML = `Word From: ${objectKey}`;
 let letters = "";
 alphaArray.forEach((ele) => {
   letters += `<span class="letter">${ele}</span>`;

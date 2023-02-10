@@ -2,7 +2,7 @@ let alphapet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let alphaArray = alphapet.split("");
 
 let mainObject = {
-  Programming: ["java-script", "Ruby", "HTML", "CSS", "go", "React"],
+  Programming: ["java script", "Ruby", "HTML", "CSS", "go", "React"],
   Countries: ["Egypt", "Palestine", "Libya", "Suadi-Arabia", "Syria", "Sudan"],
   Planets: ["Mercury", "Venus", "Earth", "Mars", "Uranus", "Neptun"],
   Fruits: ["Apple", "Orange", "Banana", "Water-Melon", "Strawberry", "apricot"],
@@ -17,14 +17,14 @@ for (let i = 0; i < randomElement.length; i++) {
   let span = document.createElement("span");
   span.classList.add("letter-box");
 
-  if (randomElement[i] === "-") {
+  if (randomElement[i] === "-" || randomElement[i] === " ") {
     span.classList.add("break");
-    span.innerHTML = randomElement[i];
+    span.innerHTML = "-";
   }
   lettersBox.appendChild(span);
 }
 
-document.querySelector(".word-from").innerHTML = `Word From ${objectKey}`;
+document.querySelector(".word-from").innerHTML = `Word Clue: ${objectKey}`;
 let letters = "";
 alphaArray.forEach((ele) => {
   letters += `<span class="letter">${ele}</span>`;
@@ -38,7 +38,7 @@ spans.forEach(function (span) {
   span.addEventListener("click", function () {
     this.classList.add("clicked");
     for (let i = 0; i < randomElement.length; i++) {
-      if (randomElement[i] !== "-") {
+      if (randomElement[i] !== "-" || randomElement[i] !== " ") {
         if (this.innerHTML.toLowerCase() === randomElement[i].toLowerCase()) {
           lettersBox.children[i].innerHTML = randomElement[i].toUpperCase();
         }

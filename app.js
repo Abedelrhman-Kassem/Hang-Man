@@ -41,43 +41,42 @@ spans.forEach(function (span) {
       if (randomElement[i] !== "-" || randomElement[i] !== " ") {
         if (this.innerHTML.toLowerCase() === randomElement[i].toLowerCase()) {
           lettersBox.children[i].innerHTML = randomElement[i].toUpperCase();
+          lettersBox.children[i].classList.add("green");
         }
       }
     }
     if (randomElement.toLowerCase().includes(this.innerHTML.toLowerCase())) {
       sucsses++;
+      document.getElementById("right").play();
     } else {
       failed++;
+      document.getElementById("wrong").play();
       coloringRed();
     }
 
     if (sucsses === randomElement.length || check()) {
-      sucssesPopup();
+      let text = `Congratulation You Won The Word Is
+      <span>${randomElement.toUpperCase()}</span>
+      <button id="reload">Play Again</button>`;
+      popUp(text);
+      document.getElementById("winner").play();
     } else if (failed === 9) {
-      failedPopup();
+      let text = `Oops You Lost Try Again The Word Is
+      <span>${randomElement.toUpperCase()}</span>
+      <button id="reload">Play Again</button>`;
+      popUp(text);
+      document.getElementById("failer").play();
     }
   });
 });
 
-function sucssesPopup() {
-  let text = `Congratulation You Won The Word Is
-  <span>${randomElement.toUpperCase()}</span>
-  <button id="reload">Play Again</button>`;
+function popUp(text) {
   let div = document.querySelector(".result");
   div.style.display = "flex";
   div.innerHTML = text;
   reload();
 }
 
-function failedPopup() {
-  let text = `Oops You Lost Try Again The Word Is
-  <span>${randomElement.toUpperCase()}</span>
-  <button id="reload">Play Again</button>`;
-  let div = document.querySelector(".result");
-  div.style.display = "flex";
-  div.innerHTML = text;
-  reload();
-}
 function reload() {
   document.getElementById("reload").addEventListener("click", () => {
     location.reload();
